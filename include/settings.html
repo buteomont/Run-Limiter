@@ -1,0 +1,349 @@
+<html>
+  <body>
+    <center>CryptoTracker Settings</center>
+    <br><br>
+    <form method=POST target=/set>
+      <table>
+	<tr>
+	  <td>WiFi SSID:</td><td><input type=text name=SSID value={ssid}></td>
+	  </tr>
+	<tr>
+	  <td>WiFi Password:</td><td><input type=text name=wifiPassword value={wifiPassword}></td>
+	  </tr>
+	<tr>
+	  <td>Scroll Delay (seconds):</td><td><select id=scrollDelay name=scrollDelay>
+	    <option value=3>3</option>
+	    <option value=4 selected>4</option>
+	    <option value=5>5</option>
+	    <option value=6>6</option>
+	    <option value=7>7</option>
+	    <option value=8>8</option>
+	    <option value=9>9</option>
+	    <option value=10>10</option>
+	    </select>
+	    </td>
+	  </tr>
+	<tr>
+	  <td valign=top>Currencies:</td><td>
+	    <table>
+	      <tr>
+		<td><input type=checkbox name=1INCH id=1INCH value=1INCH><label for=1INCH>1INCH</label></td>
+		<td><input type=checkbox name=AAVE  id=AAVE  value=AAVE> <label for=AAVE >AAVE </label></td>
+		<td><input type=checkbox name=ADA   id=ADA   value=ADA  ><label for=ADA  >ADA  </label></td>
+		<td><input type=checkbox name=AED   id=AED   value=AED  ><label for=AED  >AED  </label></td>
+		<td><input type=checkbox name=AFN   id=AFN   value=AFN  ><label for=AFN  >AFN  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=ALGO  id=ALGO  value=ALGO ><label for=ALGO >ALGO </label></td>
+		<td><input type=checkbox name=ALL   id=ALL   value=ALL  ><label for=ALL  >ALL  </label></td>
+		<td><input type=checkbox name=AMD   id=AMD   value=AMD  ><label for=AMD  >AMD  </label></td>
+		<td><input type=checkbox name=ANG   id=ANG   value=ANG  ><label for=ANG  >ANG  </label></td>
+		<td><input type=checkbox name=ANKR  id=ANKR  value=ANKR ><label for=ANKR >ANKR </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=AOA   id=AOA   value=AOA  ><label for=AOA  >AOA  </label></td>
+		<td><input type=checkbox name=ARS   id=ARS   value=ARS  ><label for=ARS  >ARS  </label></td>
+		<td><input type=checkbox name=ATOM  id=ATOM  value=ATOM ><label for=ATOM >ATOM </label></td>
+		<td><input type=checkbox name=AUD   id=AUD   value=AUD  ><label for=AUD  >AUD  </label></td>
+		<td><input type=checkbox name=AWG   id=AWG   value=AWG  ><label for=AWG  >AWG  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=AZN   id=AZN   value=AZN  ><label for=AZN  >AZN  </label></td>
+		<td><input type=checkbox name=BAL   id=BAL   value=BAL  ><label for=BAL  >BAL  </label></td>
+		<td><input type=checkbox name=BAM   id=BAM   value=BAM  ><label for=BAM  >BAM  </label></td>
+		<td><input type=checkbox name=BAND  id=BAND  value=BAND ><label for=BAND >BAND </label></td>
+		<td><input type=checkbox name=BAT   id=BAT   value=BAT  ><label for=BAT  >BAT  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=BBD   id=BBD   value=BBD  ><label for=BBD  >BBD  </label></td>
+		<td><input type=checkbox name=BCH   id=BCH   value=BCH  ><label for=BCH  >BCH  </label></td>
+		<td><input type=checkbox name=BDT   id=BDT   value=BDT  ><label for=BDT  >BDT  </label></td>
+		<td><input type=checkbox name=BGN   id=BGN   value=BGN  ><label for=BGN  >BGN  </label></td>
+		<td><input type=checkbox name=BHD   id=BHD   value=BHD  ><label for=BHD  >BHD  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=BIF   id=BIF   value=BIF  ><label for=BIF  >BIF  </label></td>
+		<td><input type=checkbox name=BMD   id=BMD   value=BMD  ><label for=BMD  >BMD  </label></td>
+		<td><input type=checkbox name=BND   id=BND   value=BND  ><label for=BND  >BND  </label></td>
+		<td><input type=checkbox name=BNT   id=BNT   value=BNT  ><label for=BNT  >BNT  </label></td>
+		<td><input type=checkbox name=BOB   id=BOB   value=BOB  ><label for=BOB  >BOB  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=BRL   id=BRL   value=BRL  ><label for=BRL  >BRL  </label></td>
+		<td><input type=checkbox name=BSD   id=BSD   value=BSD  ><label for=BSD  >BSD  </label></td>
+		<td><input type=checkbox name=BSV   id=BSV   value=BSV  ><label for=BSV  >BSV  </label></td>
+		<td><input type=checkbox name=BTC   id=BTC   value=BTC  ><label for=BTC  >BTC  </label></td>
+		<td><input type=checkbox name=BTN   id=BTN   value=BTN  ><label for=BTN  >BTN  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=BWP   id=BWP   value=BWP  ><label for=BWP  >BWP  </label></td>
+		<td><input type=checkbox name=BYN   id=BYN   value=BYN  ><label for=BYN  >BYN  </label></td>
+		<td><input type=checkbox name=BYR   id=BYR   value=BYR  ><label for=BYR  >BYR  </label></td>
+		<td><input type=checkbox name=BZD   id=BZD   value=BZD  ><label for=BZD  >BZD  </label></td>
+		<td><input type=checkbox name=CAD   id=CAD   value=CAD  ><label for=CAD  >CAD  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=CDF   id=CDF   value=CDF  ><label for=CDF  >CDF  </label></td>
+		<td><input type=checkbox name=CGLD  id=CGLD  value=CGLD ><label for=CGLD >CGLD </label></td>
+		<td><input type=checkbox name=CHF   id=CHF   value=CHF  ><label for=CHF  >CHF  </label></td>
+		<td><input type=checkbox name=CLF   id=CLF   value=CLF  ><label for=CLF  >CLF  </label></td>
+		<td><input type=checkbox name=CLP   id=CLP   value=CLP  ><label for=CLP  >CLP  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=CNH   id=CNH   value=CNH  ><label for=CNH  >CNH  </label></td>
+		<td><input type=checkbox name=CNY   id=CNY   value=CNY  ><label for=CNY  >CNY  </label></td>
+		<td><input type=checkbox name=COMP  id=COMP  value=COMP ><label for=COMP >COMP </label></td>
+		<td><input type=checkbox name=COP   id=COP   value=COP  ><label for=COP  >COP  </label></td>
+		<td><input type=checkbox name=CRC   id=CRC   value=CRC  ><label for=CRC  >CRC  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=CRV   id=CRV   value=CRV  ><label for=CRV  >CRV  </label></td>
+		<td><input type=checkbox name=CUC   id=CUC   value=CUC  ><label for=CUC  >CUC  </label></td>
+		<td><input type=checkbox name=CVC   id=CVC   value=CVC  ><label for=CVC  >CVC  </label></td>
+		<td><input type=checkbox name=CVE   id=CVE   value=CVE  ><label for=CVE  >CVE  </label></td>
+		<td><input type=checkbox name=CZK   id=CZK   value=CZK  ><label for=CZK  >CZK  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=DAI   id=DAI   value=DAI  ><label for=DAI  >DAI  </label></td>
+		<td><input type=checkbox name=DASH  id=DASH  value=DASH ><label for=DASH >DASH </label></td>
+		<td><input type=checkbox name=DJF   id=DJF   value=DJF  ><label for=DJF  >DJF  </label></td>
+		<td><input type=checkbox name=DKK   id=DKK   value=DKK  ><label for=DKK  >DKK  </label></td>
+		<td><input type=checkbox name=DNT   id=DNT   value=DNT  ><label for=DNT  >DNT  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=DOP   id=DOP   value=DOP  ><label for=DOP  >DOP  </label></td>
+		<td><input type=checkbox name=DZD   id=DZD   value=DZD  ><label for=DZD  >DZD  </label></td>
+		<td><input type=checkbox name=EGP   id=EGP   value=EGP  ><label for=EGP  >EGP  </label></td>
+		<td><input type=checkbox name=ENJ   id=ENJ   value=ENJ  ><label for=ENJ  >ENJ  </label></td>
+		<td><input type=checkbox name=EOS   id=EOS   value=EOS  ><label for=EOS  >EOS  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=ERN   id=ERN   value=ERN  ><label for=ERN  >ERN  </label></td>
+		<td><input type=checkbox name=ETB   id=ETB   value=ETB  ><label for=ETB  >ETB  </label></td>
+		<td><input type=checkbox name=ETC   id=ETC   value=ETC  ><label for=ETC  >ETC  </label></td>
+		<td><input type=checkbox name=ETH   id=ETH   value=ETH  ><label for=ETH  >ETH  </label></td>
+		<td><input type=checkbox name=ETH2  id=ETH2  value=ETH2 ><label for=ETH2 >ETH2 </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=EUR   id=EUR   value=EUR  ><label for=EUR  >EUR  </label></td>
+		<td><input type=checkbox name=FIL   id=FIL   value=FIL  ><label for=FIL  >FIL  </label></td>
+		<td><input type=checkbox name=FJD   id=FJD   value=FJD  ><label for=FJD  >FJD  </label></td>
+		<td><input type=checkbox name=FKP   id=FKP   value=FKP  ><label for=FKP  >FKP  </label></td>
+		<td><input type=checkbox name=FORTH id=FORTH value=FORTH><label for=FORTH>FORTH</label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=GBP   id=GBP   value=GBP  ><label for=GBP  >GBP  </label></td>
+		<td><input type=checkbox name=GBX   id=GBX   value=GBX  ><label for=GBX  >GBX  </label></td>
+		<td><input type=checkbox name=GEL   id=GEL   value=GEL  ><label for=GEL  >GEL  </label></td>
+		<td><input type=checkbox name=GGP   id=GGP   value=GGP  ><label for=GGP  >GGP  </label></td>
+		<td><input type=checkbox name=GHS   id=GHS   value=GHS  ><label for=GHS  >GHS  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=GIP   id=GIP   value=GIP  ><label for=GIP  >GIP  </label></td>
+		<td><input type=checkbox name=GMD   id=GMD   value=GMD  ><label for=GMD  >GMD  </label></td>
+		<td><input type=checkbox name=GNF   id=GNF   value=GNF  ><label for=GNF  >GNF  </label></td>
+		<td><input type=checkbox name=GRT   id=GRT   value=GRT  ><label for=GRT  >GRT  </label></td>
+		<td><input type=checkbox name=GTQ   id=GTQ   value=GTQ  ><label for=GTQ  >GTQ  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=GYD   id=GYD   value=GYD  ><label for=GYD  >GYD  </label></td>
+		<td><input type=checkbox name=HKD   id=HKD   value=HKD  ><label for=HKD  >HKD  </label></td>
+		<td><input type=checkbox name=HNL   id=HNL   value=HNL  ><label for=HNL  >HNL  </label></td>
+		<td><input type=checkbox name=HRK   id=HRK   value=HRK  ><label for=HRK  >HRK  </label></td>
+		<td><input type=checkbox name=HTG   id=HTG   value=HTG  ><label for=HTG  >HTG  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=HUF   id=HUF   value=HUF  ><label for=HUF  >HUF  </label></td>
+		<td><input type=checkbox name=IDR   id=IDR   value=IDR  ><label for=IDR  >IDR  </label></td>
+		<td><input type=checkbox name=ILS   id=ILS   value=ILS  ><label for=ILS  >ILS  </label></td>
+		<td><input type=checkbox name=IMP   id=IMP   value=IMP  ><label for=IMP  >IMP  </label></td>
+		<td><input type=checkbox name=INR   id=INR   value=INR  ><label for=INR  >INR  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=IQD   id=IQD   value=IQD  ><label for=IQD  >IQD  </label></td>
+		<td><input type=checkbox name=ISK   id=ISK   value=ISK  ><label for=ISK  >ISK  </label></td>
+		<td><input type=checkbox name=JEP   id=JEP   value=JEP  ><label for=JEP  >JEP  </label></td>
+		<td><input type=checkbox name=JMD   id=JMD   value=JMD  ><label for=JMD  >JMD  </label></td>
+		<td><input type=checkbox name=JOD   id=JOD   value=JOD  ><label for=JOD  >JOD  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=JPY   id=JPY   value=JPY  ><label for=JPY  >JPY  </label></td>
+		<td><input type=checkbox name=KES   id=KES   value=KES  ><label for=KES  >KES  </label></td>
+		<td><input type=checkbox name=KGS   id=KGS   value=KGS  ><label for=KGS  >KGS  </label></td>
+		<td><input type=checkbox name=KHR   id=KHR   value=KHR  ><label for=KHR  >KHR  </label></td>
+		<td><input type=checkbox name=KMF   id=KMF   value=KMF  ><label for=KMF  >KMF  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=KNC   id=KNC   value=KNC  ><label for=KNC  >KNC  </label></td>
+		<td><input type=checkbox name=KRW   id=KRW   value=KRW  ><label for=KRW  >KRW  </label></td>
+		<td><input type=checkbox name=KWD   id=KWD   value=KWD  ><label for=KWD  >KWD  </label></td>
+		<td><input type=checkbox name=KYD   id=KYD   value=KYD  ><label for=KYD  >KYD  </label></td>
+		<td><input type=checkbox name=KZT   id=KZT   value=KZT  ><label for=KZT  >KZT  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=LAK   id=LAK   value=LAK  ><label for=LAK  >LAK  </label></td>
+		<td><input type=checkbox name=LBP   id=LBP   value=LBP  ><label for=LBP  >LBP  </label></td>
+		<td><input type=checkbox name=LINK  id=LINK  value=LINK ><label for=LINK >LINK </label></td>
+		<td><input type=checkbox name=LKR   id=LKR   value=LKR  ><label for=LKR  >LKR  </label></td>
+		<td><input type=checkbox name=LRC   id=LRC   value=LRC  ><label for=LRC  >LRC  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=LRD   id=LRD   value=LRD  ><label for=LRD  >LRD  </label></td>
+		<td><input type=checkbox name=LSL   id=LSL   value=LSL  ><label for=LSL  >LSL  </label></td>
+		<td><input type=checkbox name=LTC   id=LTC   value=LTC  ><label for=LTC  >LTC  </label></td>
+		<td><input type=checkbox name=LYD   id=LYD   value=LYD  ><label for=LYD  >LYD  </label></td>
+		<td><input type=checkbox name=MAD   id=MAD   value=MAD  ><label for=MAD  >MAD  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=MANA  id=MANA  value=MANA ><label for=MANA >MANA </label></td>
+		<td><input type=checkbox name=MATIC id=MATIC value=MATIC><label for=MATIC>MATIC</label></td>
+		<td><input type=checkbox name=MDL   id=MDL   value=MDL  ><label for=MDL  >MDL  </label></td>
+		<td><input type=checkbox name=MGA   id=MGA   value=MGA  ><label for=MGA  >MGA  </label></td>
+		<td><input type=checkbox name=MKD   id=MKD   value=MKD  ><label for=MKD  >MKD  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=MKR   id=MKR   value=MKR  ><label for=MKR  >MKR  </label></td>
+		<td><input type=checkbox name=MMK   id=MMK   value=MMK  ><label for=MMK  >MMK  </label></td>
+		<td><input type=checkbox name=MNT   id=MNT   value=MNT  ><label for=MNT  >MNT  </label></td>
+		<td><input type=checkbox name=MOP   id=MOP   value=MOP  ><label for=MOP  >MOP  </label></td>
+		<td><input type=checkbox name=MRO   id=MRO   value=MRO  ><label for=MRO  >MRO  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=MTL   id=MTL   value=MTL  ><label for=MTL  >MTL  </label></td>
+		<td><input type=checkbox name=MUR   id=MUR   value=MUR  ><label for=MUR  >MUR  </label></td>
+		<td><input type=checkbox name=MVR   id=MVR   value=MVR  ><label for=MVR  >MVR  </label></td>
+		<td><input type=checkbox name=MWK   id=MWK   value=MWK  ><label for=MWK  >MWK  </label></td>
+		<td><input type=checkbox name=MXN   id=MXN   value=MXN  ><label for=MXN  >MXN  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=MYR   id=MYR   value=MYR  ><label for=MYR  >MYR  </label></td>
+		<td><input type=checkbox name=MZN   id=MZN   value=MZN  ><label for=MZN  >MZN  </label></td>
+		<td><input type=checkbox name=NAD   id=NAD   value=NAD  ><label for=NAD  >NAD  </label></td>
+		<td><input type=checkbox name=NGN   id=NGN   value=NGN  ><label for=NGN  >NGN  </label></td>
+		<td><input type=checkbox name=NIO   id=NIO   value=NIO  ><label for=NIO  >NIO  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=NKN   id=NKN   value=NKN  ><label for=NKN  >NKN  </label></td>
+		<td><input type=checkbox name=NMR   id=NMR   value=NMR  ><label for=NMR  >NMR  </label></td>
+		<td><input type=checkbox name=NOK   id=NOK   value=NOK  ><label for=NOK  >NOK  </label></td>
+		<td><input type=checkbox name=NPR   id=NPR   value=NPR  ><label for=NPR  >NPR  </label></td>
+		<td><input type=checkbox name=NU    id=NU    value=NU   ><label for=NU   >NU   </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=NZD   id=NZD   value=NZD  ><label for=NZD  >NZD  </label></td>
+		<td><input type=checkbox name=OGN   id=OGN   value=OGN  ><label for=OGN  >OGN  </label></td>
+		<td><input type=checkbox name=OMG   id=OMG   value=OMG  ><label for=OMG  >OMG  </label></td>
+		<td><input type=checkbox name=OMR   id=OMR   value=OMR  ><label for=OMR  >OMR  </label></td>
+		<td><input type=checkbox name=OXT   id=OXT   value=OXT  ><label for=OXT  >OXT  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=PAB   id=PAB   value=PAB  ><label for=PAB  >PAB  </label></td>
+		<td><input type=checkbox name=PEN   id=PEN   value=PEN  ><label for=PEN  >PEN  </label></td>
+		<td><input type=checkbox name=PGK   id=PGK   value=PGK  ><label for=PGK  >PGK  </label></td>
+		<td><input type=checkbox name=PHP   id=PHP   value=PHP  ><label for=PHP  >PHP  </label></td>
+		<td><input type=checkbox name=PKR   id=PKR   value=PKR  ><label for=PKR  >PKR  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=PLN   id=PLN   value=PLN  ><label for=PLN  >PLN  </label></td>
+		<td><input type=checkbox name=PYG   id=PYG   value=PYG  ><label for=PYG  >PYG  </label></td>
+		<td><input type=checkbox name=QAR   id=QAR   value=QAR  ><label for=QAR  >QAR  </label></td>
+		<td><input type=checkbox name=REN   id=REN   value=REN  ><label for=REN  >REN  </label></td>
+		<td><input type=checkbox name=REP   id=REP   value=REP  ><label for=REP  >REP  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=RON   id=RON   value=RON  ><label for=RON  >RON  </label></td>
+		<td><input type=checkbox name=RSD   id=RSD   value=RSD  ><label for=RSD  >RSD  </label></td>
+		<td><input type=checkbox name=RUB   id=RUB   value=RUB  ><label for=RUB  >RUB  </label></td>
+		<td><input type=checkbox name=RWF   id=RWF   value=RWF  ><label for=RWF  >RWF  </label></td>
+		<td><input type=checkbox name=SAR   id=SAR   value=SAR  ><label for=SAR  >SAR  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=SBD   id=SBD   value=SBD  ><label for=SBD  >SBD  </label></td>
+		<td><input type=checkbox name=SCR   id=SCR   value=SCR  ><label for=SCR  >SCR  </label></td>
+		<td><input type=checkbox name=SEK   id=SEK   value=SEK  ><label for=SEK  >SEK  </label></td>
+		<td><input type=checkbox name=SGD   id=SGD   value=SGD  ><label for=SGD  >SGD  </label></td>
+		<td><input type=checkbox name=SHP   id=SHP   value=SHP  ><label for=SHP  >SHP  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=SKL   id=SKL   value=SKL  ><label for=SKL  >SKL  </label></td>
+		<td><input type=checkbox name=SLL   id=SLL   value=SLL  ><label for=SLL  >SLL  </label></td>
+		<td><input type=checkbox name=SNX   id=SNX   value=SNX  ><label for=SNX  >SNX  </label></td>
+		<td><input type=checkbox name=SOS   id=SOS   value=SOS  ><label for=SOS  >SOS  </label></td>
+		<td><input type=checkbox name=SRD   id=SRD   value=SRD  ><label for=SRD  >SRD  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=SSP   id=SSP   value=SSP  ><label for=SSP  >SSP  </label></td>
+		<td><input type=checkbox name=STD   id=STD   value=STD  ><label for=STD  >STD  </label></td>
+		<td><input type=checkbox name=STORJ id=STORJ value=STORJ><label for=STORJ>STORJ</label></td>
+		<td><input type=checkbox name=SUSHI id=SUSHI value=SUSHI><label for=SUSHI>SUSHI</label></td>
+		<td><input type=checkbox name=SVC   id=SVC   value=SVC  ><label for=SVC  >SVC  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=SZL   id=SZL   value=SZL  ><label for=SZL  >SZL  </label></td>
+		<td><input type=checkbox name=THB   id=THB   value=THB  ><label for=THB  >THB  </label></td>
+		<td><input type=checkbox name=TJS   id=TJS   value=TJS  ><label for=TJS  >TJS  </label></td>
+		<td><input type=checkbox name=TMT   id=TMT   value=TMT  ><label for=TMT  >TMT  </label></td>
+		<td><input type=checkbox name=TND   id=TND   value=TND  ><label for=TND  >TND  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=TOP   id=TOP   value=TOP  ><label for=TOP  >TOP  </label></td>
+		<td><input type=checkbox name=TRY   id=TRY   value=TRY  ><label for=TRY  >TRY  </label></td>
+		<td><input type=checkbox name=TTD   id=TTD   value=TTD  ><label for=TTD  >TTD  </label></td>
+		<td><input type=checkbox name=TWD   id=TWD   value=TWD  ><label for=TWD  >TWD  </label></td>
+		<td><input type=checkbox name=TZS   id=TZS   value=TZS  ><label for=TZS  >TZS  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=UAH   id=UAH   value=UAH  ><label for=UAH  >UAH  </label></td>
+		<td><input type=checkbox name=UGX   id=UGX   value=UGX  ><label for=UGX  >UGX  </label></td>
+		<td><input type=checkbox name=UMA   id=UMA   value=UMA  ><label for=UMA  >UMA  </label></td>
+		<td><input type=checkbox name=UNI   id=UNI   value=UNI  ><label for=UNI  >UNI  </label></td>
+		<td><input type=checkbox name=USD   id=USD   value=USD  ><label for=USD  >USD  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=USDC  id=USDC  value=USDC ><label for=USDC >USDC </label></td>
+		<td><input type=checkbox name=UYU   id=UYU   value=UYU  ><label for=UYU  >UYU  </label></td>
+		<td><input type=checkbox name=UZS   id=UZS   value=UZS  ><label for=UZS  >UZS  </label></td>
+		<td><input type=checkbox name=VES   id=VES   value=VES  ><label for=VES  >VES  </label></td>
+		<td><input type=checkbox name=VND   id=VND   value=VND  ><label for=VND  >VND  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=VUV   id=VUV   value=VUV  ><label for=VUV  >VUV  </label></td>
+		<td><input type=checkbox name=WBTC  id=WBTC  value=WBTC ><label for=WBTC >WBTC </label></td>
+		<td><input type=checkbox name=WST   id=WST   value=WST  ><label for=WST  >WST  </label></td>
+		<td><input type=checkbox name=XAF   id=XAF   value=XAF  ><label for=XAF  >XAF  </label></td>
+		<td><input type=checkbox name=XAG   id=XAG   value=XAG  ><label for=XAG  >XAG  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=XAU   id=XAU   value=XAU  ><label for=XAU  >XAU  </label></td>
+		<td><input type=checkbox name=XCD   id=XCD   value=XCD  ><label for=XCD  >XCD  </label></td>
+		<td><input type=checkbox name=XDR   id=XDR   value=XDR  ><label for=XDR  >XDR  </label></td>
+		<td><input type=checkbox name=XLM   id=XLM   value=XLM  ><label for=XLM  >XLM  </label></td>
+		<td><input type=checkbox name=XOF   id=XOF   value=XOF  ><label for=XOF  >XOF  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=XPD   id=XPD   value=XPD  ><label for=XPD  >XPD  </label></td>
+		<td><input type=checkbox name=XPF   id=XPF   value=XPF  ><label for=XPF  >XPF  </label></td>
+		<td><input type=checkbox name=XPT   id=XPT   value=XPT  ><label for=XPT  >XPT  </label></td>
+		<td><input type=checkbox name=XTZ   id=XTZ   value=XTZ  ><label for=XTZ  >XTZ  </label></td>
+		<td><input type=checkbox name=YER   id=YER   value=YER  ><label for=YER  >YER  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=YFI   id=YFI   value=YFI  ><label for=YFI  >YFI  </label></td>
+		<td><input type=checkbox name=ZAR   id=ZAR   value=ZAR  ><label for=ZAR  >ZAR  </label></td>
+		<td><input type=checkbox name=ZEC   id=ZEC   value=ZEC  ><label for=ZEC  >ZEC  </label></td>
+		<td><input type=checkbox name=ZMW   id=ZMW   value=ZMW  ><label for=ZMW  >ZMW  </label></td>
+		<td><input type=checkbox name=ZRX   id=ZRX   value=ZRX  ><label for=ZRX  >ZRX  </label></td>
+		</tr>
+	<tr>
+		<td><input type=checkbox name=ZWL   id=ZWL   value=ZWL  ><label for=ZWL  >ZWL  </label></td>
+		</tr>
+	    <tr><td colspan=5 align=center><input type=submit></td></tr>
+	    </table>
+	    </td>
+	  </tr>
+	</table>
+      
+      </form>
+    </body>
+  </html>
+
