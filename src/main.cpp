@@ -176,26 +176,33 @@ void incomingMqttHandler(char* reqTopic, byte* payload, unsigned int length)
   }
 
 boolean sendMessage(char* topic, char* value)
-  {  
-  char topicBuf[MQTT_MAX_TOPIC_SIZE+MQTT_MAX_MESSAGE_SIZE];
-  char reading[18];
-  boolean success=false; //only for the incoming topic and value
+  { 
+  boolean success=false;
+  if (!mqttClient.connected())
+    {
+    Serial.println("Not connected to MQTT broker!");
+    }
+  else
+    {
+    char topicBuf[MQTT_MAX_TOPIC_SIZE+MQTT_MAX_MESSAGE_SIZE];
+    char reading[18];
+//    boolean success=false; //only for the incoming topic and value
 
-  //publish the radio strength reading while we're at it
-  strcpy(topicBuf,settings.mqttTopicRoot);
-  strcat(topicBuf,MQTT_TOPIC_RSSI);
-  sprintf(reading,"%d",WiFi.RSSI()); 
-  success=publish(topicBuf,reading,true); //retain
-  if (!success)
-    Serial.println("************ Failed publishing rssi!");
-  
-  //publish the message
-  strcpy(topicBuf,settings.mqttTopicRoot);
-  strcat(topicBuf,topic);
-  success=publish(topicBuf,value,true); //retain
-  if (!success)
-    Serial.println("************ Failed publishing "+String(topic)+"! ("+String(success)+")");
-  
+    //publish the radio strength reading while we're at it
+    strcpy(topicBuf,settings.mqttTopicRoot);
+    strcat(topicBuf,MQTT_TOPIC_RSSI);
+    sprintf(reading,"%d",WiFi.RSSI()); 
+    success=publish(topicBuf,reading,true); //retain
+    if (!success)
+      Serial.println("************ Failed publishing rssi!");
+    
+    //publish the message
+    strcpy(topicBuf,settings.mqttTopicRoot);
+    strcat(topicBuf,topic);
+    success=publish(topicBuf,value,true); //retain
+    if (!success)
+      Serial.println("************ Failed publishing "+String(topic)+"! ("+String(success)+")");
+    }
   return success;
   }
 
@@ -256,6 +263,8 @@ void setup()
   digitalWrite(LED_BUILTIN,LED_OFF);
   pinMode(RELAY_PORT,OUTPUT); // The port for the SSRs
   digitalWrite(RELAY_PORT,RELAY_ON); //turn on the device
+  pinMode(LED_PORT,OUTPUT); // The port for the warning LED
+  digitalWrite(LED_PORT,LED_OFF); //turn off the LED until we time out
 
   Serial.begin(115200);
   Serial.setTimeout(10000);
@@ -314,7 +323,7 @@ void loop()
   if (settings.debug && millis()%1000==0 && !wrapped) //not too fast
     {
     unsigned long remainingTime=timeoutCount-millis();
-    if (remainingTime>4294940000)
+    if (remainingTime>4294900000)
       wrapped=true; //that's about as close as we can get
     if (remainingTime != lastTime && !wrapped)
       {
@@ -324,12 +333,21 @@ void loop()
       }
     }
 
-  if (millis()>=timeoutCount && timeoutMessageSent==false)
+  if (millis()>=timeoutCount && !timeoutMessageSent)
     {
+    digitalWrite(RELAY_PORT,RELAY_OFF); //turn off the device
+    digitalWrite(LED_PORT,LED_ON); //turn on the failure LED
     connectToWiFi(); //make sure we're connected to the broker
     timeoutMessageSent=sendMessage(MQTT_TOPIC_STATUS, settings.mqttTimeoutMessage);
-    digitalWrite(RELAY_PORT,RELAY_OFF);
-    delay(1000); //repeat every second until message is sent
+    }
+
+  static unsigned long nextFlashTime=millis()+250;
+  if (millis()>=timeoutCount && millis()>nextFlashTime && timeoutMessageSent) //flash the led
+    {
+    static boolean warning_led_state=LED_ON;
+    digitalWrite(LED_PORT,warning_led_state);
+    warning_led_state=!warning_led_state;
+    nextFlashTime=millis()+250; //half second flash rate
     }
   }
 
@@ -359,7 +377,10 @@ boolean connectToWiFi()
     for (int i=0;i<WIFI_CONNECTION_ATTEMPTS;i++)  
       {
       if (WiFi.status() == WL_CONNECTED)
+        {
+        digitalWrite(LED_BUILTIN,LED_ON); //show we're connected
         break;  // got it
+        }
       if (settings.debug)
         Serial.print(".");
       checkForCommand(); // Check for input in case something needs to be changed to work
