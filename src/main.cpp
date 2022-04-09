@@ -13,12 +13,12 @@
  * 
  * Configuration is done via serial connection or by retained MQTT message.
  *
- * ********** NOTE ******************** 
+ * ********** NOTE ***************** 
  * The runtime limiter used on the Buteomont water system uses
  * a modified version of this code. The trouble LED is connected to the same
  * pin as the output transistor, so it does not blink when the circuit times
  * out. This version of code probably shouldn't be loaded on that controller.
- * ********** NOTE ******************** 
+ * ********** NOTE ***************** 
  *  
  * **** to erase the entire flash chip in PlatformIO, open
  * **** a terminal and type "pio run -t erase"
