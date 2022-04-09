@@ -19,16 +19,6 @@ download the executable.-->
 			<DATE>7-16-2021</DATE>
 			<GRID spacing='25.00000' snap='1'/>
 		</DETAILS>
-		<FONT id='0'>
-			<HEIGHT>-13</HEIGHT>
-			<WIDTH>8</WIDTH>
-			<WEIGHT>400</WEIGHT>
-			<ITALIC>0</ITALIC>
-			<UNDERLINE>0</UNDERLINE>
-			<STRIKEOUT>0</STRIKEOUT>
-			<CHARSET>0</CHARSET>
-			<FACENAME>Arial</FACENAME>
-		</FONT>
 		<FONT id='1'>
 			<HEIGHT>-10</HEIGHT>
 			<WIDTH>0</WIDTH>
@@ -49,9 +39,9 @@ download the executable.-->
 			<CHARSET>0</CHARSET>
 			<FACENAME>Arial</FACENAME>
 		</FONT>
-		<FONT id='5'>
-			<HEIGHT>-13</HEIGHT>
-			<WIDTH>8</WIDTH>
+		<FONT id='4'>
+			<HEIGHT>-11</HEIGHT>
+			<WIDTH>5</WIDTH>
 			<WEIGHT>400</WEIGHT>
 			<ITALIC>0</ITALIC>
 			<UNDERLINE>0</UNDERLINE>
@@ -60,11 +50,6 @@ download the executable.-->
 			<FACENAME>Arial</FACENAME>
 		</FONT>
 		<STYLE id='0'>
-			<STYLE>0</STYLE>
-			<COLOR>000000</COLOR>
-			<THICKNESS>1</THICKNESS>
-		</STYLE>
-		<STYLE id='2'>
 			<STYLE>0</STYLE>
 			<COLOR>000000</COLOR>
 			<THICKNESS>1</THICKNESS>
@@ -488,42 +473,34 @@ download the executable.-->
 				<TEXT pos='40.00000,37.00000' direction='3' font='3' color='000000'>WEMOS</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='7'>
-			<NAME type='1'>Buck Converter</NAME>
-			<REF type='1'>U?</REF>
-			<DESCRIPTION>Mini360 Buck Converter</DESCRIPTION>
+		<SYMBOLDEF id='6'>
+			<NAME type='0'>VREG</NAME>
+			<REF type='0'>U?</REF>
+			<DESCRIPTION>Fixed V 3-term reg</DESCRIPTION>
 			<PPP>1</PPP>
 			<GUID></GUID>
-			<FIELD>
-				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
-				<DEFAULT>5</DEFAULT>
-				<FT>000002</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<FIELD>
-				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
-				<DEFAULT>5</DEFAULT>
-				<FT>000002</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<FIELD>
-				<NAME>Package</NAME>
-				<DEFAULT>package name for PCB layout</DEFAULT>
-				<FT>000001</FT>
-				<VALUE></VALUE>
-				<POS>0.00000,0.00000</POS>
-			</FIELD>
-			<REF_POINT power='0' part='0' pos='89.50000,61.00000'/>
+			<REF_POINT power='0' part='0' pos='29.00000,21.00000'/>
+			<REF_POINT power='1' part='0' pos='29.00000,21.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='63.00000,48.50000' b='86.50000,61.00000' style='2' fill='0'/>
-				<PIN pos='60.00000,50.50000' which='0' elec='0' direction='3' part='0' number='1' show='3' length='15' number_pos='0' centre_name='0'>+Vin</PIN>
-				<PIN pos='60.00000,59.00000' which='0' elec='0' direction='3' part='0' number='2' show='3' length='15' number_pos='0' centre_name='0'>-Vin</PIN>
-				<PIN pos='89.50000,50.50000' which='0' elec='1' direction='2' part='0' number='3' show='3' length='15' number_pos='0' centre_name='0'>+V0ut</PIN>
-				<PIN pos='89.50000,59.00000' which='0' elec='0' direction='2' part='0' number='4' show='3' length='15' number_pos='0' centre_name='0'>-Vout</PIN>
-				<TEXT pos='66.50000,55.50000' direction='3' font='5' color='000000'>Mini360 Buck</TEXT>
-				<TEXT pos='68.50000,57.50000' direction='3' font='5' color='000000'>Converter</TEXT>
+				<PIN pos='9.00000,10.00000' which='0' elec='0' direction='3' part='0' number='1' show='1' length='30' number_pos='0' centre_name='0'></PIN>
+				<PIN pos='19.00000,21.00000' which='0' elec='0' direction='0' part='0' number='2' show='1' length='30' number_pos='0' centre_name='0'></PIN>
+				<PIN pos='29.00000,10.00000' which='0' elec='1' direction='2' part='0' number='3' show='1' length='30' number_pos='0' centre_name='0'></PIN>
+				<TEXT pos='21.80000,20.00000' direction='0' font='4' color='000000'>Gnd</TEXT>
+				<TEXT pos='24.00000,10.00000' direction='3' font='4' color='000000'>Out</TEXT>
+				<TEXT pos='11.00000,10.00000' direction='3' font='4' color='000000'>In</TEXT>
+				<POLYGON pos='14.00000,10.00000' style='4' fill='0' polygon='0'>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='23.00000,10.00000' style='4' fill='0' polygon='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='1.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='19.00000,15.00000' style='4' fill='0' polygon='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,1.00000' arc='0'/>
+				</POLYGON>
+				<RECTANGLE a='23.00000,9.00000' b='15.00000,15.00000' style='4' fill='0'/>
 			</TinyCAD>
 		</SYMBOLDEF>
 		<OPTIONS>
@@ -556,7 +533,7 @@ download the executable.-->
 			<FIELD type='1' description='Mouser Part' value='..' show='0' pos='-5.00000,23.60000'/>
 			<FIELD type='1' description='Cost' value='..' show='0' pos='-5.00000,26.00000'/>
 		</SYMBOL>
-		<SYMBOL id='1' pos='57.50000,85.50000' part='0' rotate='2' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='1' pos='78.00000,85.50000' part='0' rotate='2' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='H1' show='0' pos='-5.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='2x1_HDR' show='0' pos='-5.00000,-4.00000'/>
 			<FIELD type='1' description='Package' value='1X2HDR-100' show='0' pos='-5.00000,4.40000'/>
@@ -610,17 +587,18 @@ download the executable.-->
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='WEMOS/ESP8266' show='0' pos='1.00000,-32.60000'/>
 		</SYMBOL>
-		<WIRE a='57.50000,84.50000' b='59.50000,84.50000'/>
-		<WIRE a='59.50000,84.50000' b='59.50000,85.00000'/>
-		<WIRE a='59.50000,85.00000' b='67.00000,85.00000'/>
-		<WIRE a='57.50000,82.50000' b='59.50000,82.50000'/>
-		<WIRE a='59.50000,76.50000' b='59.50000,71.50000'/>
-		<WIRE a='67.00000,76.50000' b='71.50000,76.50000'/>
-		<WIRE a='59.50000,71.50000' b='200.00000,71.50000'/>
+		<WIRE a='78.00000,84.50000' b='80.00000,84.50000'/>
+		<WIRE a='80.00000,84.50000' b='80.00000,90.00000'/>
+		<WIRE a='80.00000,90.00000' b='98.00000,90.00000'/>
+		<WIRE a='78.00000,82.50000' b='80.00000,82.50000'/>
+		<WIRE a='80.00000,82.50000' b='80.00000,79.00000'/>
+		<WIRE a='80.00000,79.00000' b='88.00000,79.00000'/>
+		<WIRE a='80.00000,79.00000' b='80.00000,71.50000'/>
+		<WIRE a='80.00000,71.50000' b='200.00000,71.50000'/>
 		<WIRE a='200.00000,71.50000' b='200.00000,81.50000'/>
 		<WIRE a='200.00000,81.50000' b='204.00000,81.50000'/>
 		<POWER pos='200.00000,100.50000' which='4' direction='1'></POWER>
-		<POWER pos='96.50000,87.00000' which='4' direction='1'></POWER>
+		<POWER pos='98.00000,89.50000' which='4' direction='1'></POWER>
 		<WIRE a='200.00000,86.50000' b='200.00000,83.50000'/>
 		<WIRE a='200.00000,83.50000' b='204.00000,83.50000'/>
 		<WIRE a='151.50000,137.00000' b='155.50000,137.00000'/>
@@ -633,24 +611,16 @@ download the executable.-->
 		<WIRE a='164.50000,137.00000' b='172.00000,137.00000'/>
 		<WIRE a='172.00000,137.00000' b='172.00000,111.50000'/>
 		<WIRE a='172.00000,111.50000' b='164.00000,111.50000'/>
-		<WIRE a='137.50000,137.00000' b='107.00000,137.00000'/>
-		<WIRE a='107.00000,95.50000' b='113.00000,95.50000'/>
-		<SYMBOL id='7' pos='96.50000,87.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='1.00000,-10.50000'/>
-			<FIELD type='1' description='Name' value='Buck Converter' show='0' pos='0.00000,0.00000'/>
-			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
-			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
-			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='1.00000,-8.10000'/>
+		<SYMBOL id='6' pos='108.00000,90.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='U?' show='0' pos='1.00000,-9.10000'/>
+			<FIELD type='0' description='Name' value='LM78L05' show='1' pos='-14.50000,-12.50000'/>
 		</SYMBOL>
-		<WIRE a='67.00000,76.50000' b='59.50000,76.50000'/>
-		<WIRE a='59.50000,82.50000' b='59.50000,76.50000'/>
-		<JUNCTION pos='59.50000,76.50000'/>
-		<JUNCTION pos='67.00000,76.50000'/>
-		<WIRE a='96.50000,87.00000' b='96.50000,85.00000'/>
-		<WIRE a='96.50000,76.50000' b='107.00000,76.50000'/>
-		<WIRE a='107.00000,95.50000' b='107.00000,137.00000'/>
-		<JUNCTION pos='107.00000,95.50000'/>
-		<WIRE a='107.00000,76.50000' b='107.00000,95.50000'/>
-		<LABEL pos='100.00000,76.50000' direction='3' font='0' color='208000' style='0'>3v3</LABEL>
+		<JUNCTION pos='80.00000,79.00000'/>
+		<WIRE a='108.00000,79.00000' b='167.50000,79.00000'/>
+		<WIRE a='167.50000,79.00000' b='167.50000,95.50000'/>
+		<WIRE a='167.50000,95.50000' b='164.00000,95.50000'/>
+		<WIRE a='137.50000,137.00000' b='107.00000,137.00000'/>
+		<WIRE a='107.00000,137.00000' b='107.00000,95.50000'/>
+		<WIRE a='107.00000,95.50000' b='113.00000,95.50000'/>
 	</TinyCAD>
 </TinyCADSheets>
