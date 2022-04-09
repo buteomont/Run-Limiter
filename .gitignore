@@ -3,3 +3,6 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+extras/PumpRuntimeLimiter.dsn.autosave
+extras/RuntimeLimiter.dsn.autosave
+extras/compressorLimiter.dsn.autosave

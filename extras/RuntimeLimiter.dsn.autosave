@@ -570,7 +570,7 @@ download the executable.-->
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='' show='0' pos='-9.00000,4.40000'/>
-			<FIELD type='1' description='None' value='Time Out' show='1' pos='-8.50000,2.80000'/>
+			<FIELD type='1' description='None' value='None' show='0' pos='-9.00000,6.80000'/>
 		</SYMBOL>
 		<SYMBOL id='4' pos='203.00000,100.50000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='0' description='Ref' value='Z?' show='0' pos='-11.00000,2.00000'/>
