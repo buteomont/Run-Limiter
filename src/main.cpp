@@ -563,12 +563,6 @@ String getConfigCommand()
   if (commandComplete) 
     {
     String newCommand=commandString;
-    if (settings.debug)
-      {
-      Serial.print("Command is -->");
-      Serial.print(newCommand);
-      Serial.println("<--");
-      }
     commandString = "";
     commandComplete = false;
     return newCommand;
@@ -820,8 +814,6 @@ void incomingData()
     if (inChar == '\n') 
       {
       commandComplete = true;
-      if (settings.debug)
-        Serial.println(F("Command is complete."));
       }
     else
       {
