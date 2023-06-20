@@ -1,4 +1,5 @@
 
+#define FLASH_LED false
 #define LED_ON LOW
 #define LED_OFF HIGH
 #define RELAY_ON HIGH

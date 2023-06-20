@@ -15,9 +15,10 @@
  *
  * ********** NOTE ***************** 
  * The runtime limiter used on the Buteomont water system uses
- * a modified version of this code. The trouble LED is connected to the same
- * pin as the output transistor, so it does not blink when the circuit times
- * out. This version of code probably shouldn't be loaded on that controller.
+ * a slightly different circuit than the compressor uses. The trouble LED is 
+ * connected to the same pin as the output transistor, so it does not blink 
+ * when the circuit times out. The definition FLASH_LED in runLimiter.h MUST 
+ * be set to false when loading code for that controller.
  * ********** NOTE ***************** 
  *  
  * **** to erase the entire flash chip in PlatformIO, open
@@ -327,7 +328,7 @@ void loop()
   checkForCommand(); // Check for input in case something needs to be changed to work
   ArduinoOTA.handle(); //Check for new version
 
-  if (settings.debug && millis()%1000==0 && !wrapped) //not too fast
+  if (settings.debug && millis()%5000==0 && !wrapped && settingsAreValid) //not too fast
     {
     unsigned long remainingTime=timeoutCount-millis();
     if (remainingTime>4294900000)
@@ -348,13 +349,16 @@ void loop()
     timeoutMessageSent=sendMessage(MQTT_TOPIC_STATUS, settings.mqttTimeoutMessage);
     }
 
-  static unsigned long nextFlashTime=millis()+250;
-  if (millis()>=timeoutCount && millis()>nextFlashTime && timeoutMessageSent) //flash the led
+  if (FLASH_LED)
     {
-    static boolean warning_led_state=LED_ON;
-    digitalWrite(LED_PORT,warning_led_state);
-    warning_led_state=!warning_led_state;
-    nextFlashTime=millis()+250; //half second flash rate
+    static unsigned long nextFlashTime=millis()+250;
+    if (millis()>=timeoutCount && millis()>nextFlashTime && timeoutMessageSent) //flash the led
+      {
+      static boolean warning_led_state=LED_ON;
+      digitalWrite(LED_PORT,warning_led_state);
+      warning_led_state=!warning_led_state;
+      nextFlashTime=millis()+250; //half second flash rate
+      }
     }
   }
 
@@ -571,11 +575,38 @@ bool processCommand(String cmd)
   if (nme!=NULL)
     val=strtok(NULL,"=");
 
-  //Get rid of the carriage return
-  if (val!=NULL && strlen(val)>0 && val[strlen(val)-1]==13)
+  char zero[]=""; //zero length string
+
+  //Get rid of the carriage return and/or linefeed. Twice because could have both.
+  if (val!=NULL && strlen(val)>0 && (val[strlen(val)-1]==13 || val[strlen(val)-1]==10))
+    val[strlen(val)-1]=0; 
+  if (val!=NULL && strlen(val)>0 && (val[strlen(val)-1]==13 || val[strlen(val)-1]==10))
     val[strlen(val)-1]=0; 
 
-  if (nme==NULL || val==NULL || strlen(nme)==0 || strlen(val)==0)
+  //do it for the command as well.  Might not even have a value.
+  if (nme!=NULL && strlen(nme)>0 && (nme[strlen(nme)-1]==13 || nme[strlen(nme)-1]==10))
+    nme[strlen(nme)-1]=0; 
+  if (nme!=NULL && strlen(nme)>0 && (nme[strlen(nme)-1]==13 || nme[strlen(nme)-1]==10))
+    nme[strlen(nme)-1]=0; 
+
+  if (settings.debug)
+    {
+    Serial.print("Processing command \"");
+    Serial.print(nme);
+    Serial.println("\"");
+    Serial.print("Length:");
+    Serial.println(strlen(nme));
+    Serial.print("Hex:");
+    Serial.println(nme[0],HEX);
+    Serial.print("Value is \"");
+    Serial.print(val);
+    Serial.println("\"\n");
+    }
+
+  if (val==NULL)
+    val=zero;
+
+  if (nme==NULL || val==NULL || strlen(nme)==0) //empty string is a valid val value
     {
     showSettings();
     return false;   //not a valid command, or it's missing
