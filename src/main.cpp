@@ -307,9 +307,6 @@ void setup()
 
   timeoutCount=settings.maxRuntime*1000; //milliseconds until timeout occurs
 
-  if (settings.debug)
-    Serial.println(F("Connecting to WiFi"));
-  
   if (settings.validConfig==VALID_SETTINGS_FLAG)
     connectToWiFi(); //connect to the wifi
   
@@ -328,7 +325,11 @@ void loop()
   checkForCommand(); // Check for input in case something needs to be changed to work
   ArduinoOTA.handle(); //Check for new version
 
-  if (settings.debug && millis()%5000==0 && !wrapped && settingsAreValid) //not too fast
+  if (settings.debug 
+      && millis()%5000==0 
+      && !wrapped 
+      && settingsAreValid
+      && !timeoutMessageSent) 
     {
     unsigned long remainingTime=timeoutCount-millis();
     if (remainingTime>4294900000)
@@ -345,8 +346,11 @@ void loop()
     {
     digitalWrite(RELAY_PORT,RELAY_OFF); //turn off the device
     digitalWrite(LED_PORT,LED_ON); //turn on the failure LED
-    connectToWiFi(); //make sure we're connected to the broker
-    timeoutMessageSent=sendMessage(MQTT_TOPIC_STATUS, settings.mqttTimeoutMessage);
+    if (settingsAreValid)
+      {
+      connectToWiFi(); //make sure we're connected to the broker
+      timeoutMessageSent=sendMessage(MQTT_TOPIC_STATUS, settings.mqttTimeoutMessage);
+      }
     }
 
   if (FLASH_LED)
@@ -370,7 +374,7 @@ boolean connectToWiFi()
   {
   yield();
   static boolean retval=true; //assume connection to wifi is ok
-  if (WiFi.status() != WL_CONNECTED)
+  if (settingsAreValid && WiFi.status() != WL_CONNECTED)
     {
     if (settings.debug)
       {
@@ -559,7 +563,12 @@ String getConfigCommand()
   if (commandComplete) 
     {
     String newCommand=commandString;
-
+    if (settings.debug)
+      {
+      Serial.print("Command is -->");
+      Serial.print(newCommand);
+      Serial.println("<--");
+      }
     commandString = "";
     commandComplete = false;
     return newCommand;
@@ -721,7 +730,7 @@ void checkForCommand()
   {
   if (Serial.available())
     {
-    serialEvent();
+    incomingData();
     String cmd=getConfigCommand();
     if (cmd.length()>0)
       {
@@ -772,7 +781,7 @@ boolean saveSettings()
     settings.brokerPort<65535 &&
     settings.maxRuntime>0)
     {
-    Serial.println("Settings deemed complete");
+    Serial.println("Settings deemed complete.");
     settings.validConfig=VALID_SETTINGS_FLAG;
     settingsAreValid=true;
     }
@@ -798,7 +807,7 @@ boolean saveSettings()
   routine is run between each time loop() runs, so using delay inside loop can
   delay response. Multiple bytes of data may be available.
 */
-void serialEvent() 
+void incomingData() 
   {
   while (Serial.available()) 
     {
@@ -811,6 +820,8 @@ void serialEvent()
     if (inChar == '\n') 
       {
       commandComplete = true;
+      if (settings.debug)
+        Serial.println(F("Command is complete."));
       }
     else
       {
