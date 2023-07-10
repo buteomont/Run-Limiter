@@ -6,3 +6,4 @@
 extras/PumpRuntimeLimiter.dsn.autosave
 extras/RuntimeLimiter.dsn.autosave
 extras/compressorLimiter.dsn.autosave
+extras/runLimiter/runLimiter-backups/*
