@@ -879,7 +879,7 @@
   (gr_text "-" (at 4.5 15.5) (layer "F.SilkS") (tstamp 4aa76fdd-c526-46f6-828a-a4b90d3e0bb3)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text "Runtime Limiter\nDavid E. Powell\nVer. 3.0\n08/16/2023" (at 49.5 5.5) (layer "F.SilkS") (tstamp 5932221a-e131-4334-8c76-86f3c6b42976)
+  (gr_text "Runtime Limiter\nDavid E. Powell\nVer. 3.1\n08/16/2023" (at 49.5 5.5) (layer "F.SilkS") (tstamp 5932221a-e131-4334-8c76-86f3c6b42976)
     (effects (font (size 1.5 1.5) (thickness 0.2)))
   )
   (gr_text "+" (at 4.5 12.5) (layer "F.SilkS") (tstamp f1b97971-1782-4d5a-810c-180f4199e609)
