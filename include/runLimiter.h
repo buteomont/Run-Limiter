@@ -1,11 +1,11 @@
 
-#define FLASH_LED false
+#define FLASH_LED true
 #define LED_ON LOW
 #define LED_OFF HIGH
 #define RELAY_ON HIGH
 #define RELAY_OFF LOW
-#define RELAY_PORT D1
-#define LED_PORT D2
+#define RELAY_PORT 3 
+#define LED_PORT 0 
 #define WIFI_CONNECTION_ATTEMPTS 15
 #define VALID_SETTINGS_FLAG 0xDAB0
 #define SSID_SIZE 100

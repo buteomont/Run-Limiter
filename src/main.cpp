@@ -274,7 +274,7 @@ void setup()
   pinMode(LED_PORT,OUTPUT); // The port for the warning LED
   digitalWrite(LED_PORT,LED_OFF); //turn off the LED until we time out
 
-  Serial.begin(115200);
+  Serial.begin(115200,SERIAL_8N1,SERIAL_TX_ONLY); //using RX pin for output control
   Serial.setTimeout(10000);
   Serial.println();
   
@@ -791,6 +791,11 @@ boolean saveSettings()
     {
     generateMqttClientId(settings.mqttClientId);
     }
+
+  //The topic root needs to end with a slash (/).
+  //Ensure that it does.
+  if (settings.mqttTopicRoot[strlen(settings.mqttTopicRoot)-1]!='/')
+    strcat(settings.mqttTopicRoot,"/");
 
   EEPROM.put(0,settings);
   return EEPROM.commit();
