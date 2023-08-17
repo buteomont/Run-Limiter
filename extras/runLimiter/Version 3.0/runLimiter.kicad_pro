@@ -60,7 +60,12 @@
           "width": 0.2
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "copper_edge_clearance|0|3000000|19dc2353-3ded-49ee-9bf7-8ddd858d780b|6898909b-ad5d-4917-a1fc-6a31ab82af6c",
+        "copper_edge_clearance|0|47000000|19dc2353-3ded-49ee-9bf7-8ddd858d780b|ab577533-2cf2-47b8-b0a4-e17527b66ae6",
+        "copper_edge_clearance|67000000|0|19dc2353-3ded-49ee-9bf7-8ddd858d780b|2e64ed3d-e856-4fec-8d7c-89bde710f49e",
+        "copper_edge_clearance|70000000|47000000|19dc2353-3ded-49ee-9bf7-8ddd858d780b|f0b0c33f-fa3e-4b03-810b-767ea345231b"
+      ],
       "meta": {
         "version": 2
       },
@@ -411,8 +416,9 @@
         "microvia_drill": 0.1,
         "name": "Plus",
         "nets": [
-          "Net-(J3-Pad1)",
-          "Net-(J3-Pad2)"
+          "Net-(K1-Pad1)",
+          "Net-(K1-Pad3)",
+          "Net-(K1-Pad4)"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
