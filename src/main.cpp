@@ -274,7 +274,13 @@ void setup()
   pinMode(LED_PORT,OUTPUT); // The port for the warning LED
   digitalWrite(LED_PORT,LED_OFF); //turn off the LED until we time out
 
-  Serial.begin(115200,SERIAL_8N1,SERIAL_TX_ONLY); //using RX pin for output control
+  //Both GPIO 0 and GPIO2 must be high before the ESP will boot from flash.
+  //GPIO0 is high by virtue of the warning LED.  I had to use GPIO3 for the output
+  //control but it is the serial I/O RX pin. This next line frees up the RX pin 
+  //so I can use it for this purpose. Unfortunately it also disallows receiving
+  //commands from the serial port, so all commands must be passed in via MQTT.
+  Serial.begin(115200,SERIAL_8N1,SERIAL_TX_ONLY); 
+
   Serial.setTimeout(10000);
   Serial.println();
   
