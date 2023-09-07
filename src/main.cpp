@@ -11,7 +11,7 @@
  * Last Will and Testament message can be used as notification that the 
  * device has shut down normally.
  * 
- * Configuration is done via serial connection or by retained MQTT message.
+ * Configuration is done via serial connection (d1 mini only) or by retained MQTT message.
  *
  * ********** NOTE ***************** 
  * The runtime limiter used on the Buteomont water system uses
@@ -20,6 +20,14 @@
  * when the circuit times out. The definition FLASH_LED in runLimiter.h MUST 
  * be set to false when loading code for that controller.
  * ********** NOTE ***************** 
+ * 
+ * When using the ESP8266-01S, The PRECONFIGURE keyword at the top of this file must 
+ * be defined the first time it is programmed so that you can do the initial configuration
+ * via the serial port. After the initial settings are entered and the ESP can contact
+ * the MQTT server, remove the keyword, reload the firmware to the ESP, and configure 
+ * via MQTT from then on exclusively. This is because of the limited I/O on the ESP-01s.
+ * The ESP will still be able to write to the serial port, but it will not be able to
+ * read any serial input.
  *  
  * **** to erase the entire flash chip in PlatformIO, open
  * **** a terminal and type "pio run -t erase"
@@ -33,6 +41,8 @@
 #include <ArduinoOTA.h>
 
 #include "runLimiter.h"
+
+//#define PRECONFIGURE //uncomment this to allow initial configuration via serial on ESP-01s
 
 char *stack_start;// initial stack size
 
@@ -274,12 +284,20 @@ void setup()
   pinMode(LED_PORT,OUTPUT); // The port for the warning LED
   digitalWrite(LED_PORT,LED_OFF); //turn off the LED until we time out
 
-  //Both GPIO 0 and GPIO2 must be high before the ESP will boot from flash.
+  //Both GPIO 0 and GPIO2 must be high before the ESP-01s will boot from flash.
   //GPIO0 is high by virtue of the warning LED.  I had to use GPIO3 for the output
   //control but it is the serial I/O RX pin. This next line frees up the RX pin 
   //so I can use it for this purpose. Unfortunately it also disallows receiving
   //commands from the serial port, so all commands must be passed in via MQTT.
-  Serial.begin(115200,SERIAL_8N1,SERIAL_TX_ONLY); 
+  //The PRECONFIGURE keyword at the top of this file must be defined in order
+  //to do the initial configuration via the serial port. After the initial settings
+  //are entered and the ESP can contact the MQTT server, remove the keyword,
+  //reload the firmware to the ESP, and configure via MQTT exclusively.
+  #ifdef PRECONFIGURE
+    Serial.begin(115200);
+  #else
+    Serial.begin(115200,SERIAL_8N1,SERIAL_TX_ONLY); 
+  #endif
 
   Serial.setTimeout(10000);
   Serial.println();

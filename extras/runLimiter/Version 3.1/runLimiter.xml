@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/david/Documents/PlatformIO/Projects/RunLimiter/extras/runLimiter/Version 3.1/runLimiter.kicad_sch</source>
+    <date>Wed 06 Sep 2023 08:36:16 PM CDT</date>
+    <tool>Eeschema 6.0.11-2627ca5db0~126~ubuntu20.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Run Time Limiter</title>
+        <company>OmniTronics</company>
+        <rev>3.1</rev>
+        <date>2023-08-16</date>
+        <source>runLimiter.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>1.0</value>
+      <footprint>Capacitor_THT:CP_Radial_Tantal_D4.5mm_P2.50mm</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cc62787a-f6b4-406f-80c4-9748fb60a866</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>1.0</value>
+      <footprint>Capacitor_THT:CP_Radial_Tantal_D4.5mm_P2.50mm</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ed0e1ae-67a2-4420-9b0a-f45e81ac87f4</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>0.1</value>
+      <footprint>Capacitor_THT:C_Disc_D10.5mm_W5.0mm_P10.00mm</footprint>
+      <fields>
+        <field name="Rating">1000v</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Rating" value="1000v"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d0a833c-82ce-4ebd-a370-b006de4fb1f1</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>54ed0e34-1b83-49a5-b6d8-5be25315200a</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>1N4003</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4003" description="200V 1A General Purpose Rectifier Diode, DO-41"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b10bf9de-bcad-4d5e-a21e-a54eb727d8d7</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>5-13 Volts</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_TH_Headers" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>95ec20d4-7fde-441a-94c9-e52539c45487</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Vout</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_TH_Headers" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25816fa2-584e-433c-be8a-c65af368e7b4</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Dry Contacts</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f21c94f6-be32-443a-b6c5-862eed77bed0</tstamps>
+    </comp>
+    <comp ref="K1">
+      <value>Relay</value>
+      <footprint>Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C</footprint>
+      <datasheet>http://www.sanyourelay.ca/public/products/pdf/SRD.pdf</datasheet>
+      <libsource lib="Relay" part="SANYOU_SRD_Form_C" description="Sanyo SRD relay, Single Pole Miniature Power Relay,"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53dd8491-cda7-4e9d-b048-ada4398b4844</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>2N3904</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/2N3903-D.PDF</datasheet>
+      <libsource lib="AZ7029ZTR-E1" part="2N3904" description="0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1415e638-ddaf-427e-a966-dcc08fade057</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>2SD2023</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>https://pdf1.alldatasheet.com/datasheet-pdf/view/271672/SAVANTIC/2SD2023.html</datasheet>
+      <libsource lib="Transistor_BJT" part="2SC1945" description="6A Ic, 80V Vce, Silicon 27MHz RF Power NPN Transistors, TO-220"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7ee5bc87-a8f8-436d-b25b-b1224d905910</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21bf4f50-a8d9-417b-ac0c-847097873399</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>1K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a00c7d39-231a-4bac-aa72-1d5e4b581257</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>12K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d55c3d24-3ed8-4d67-b6d4-e92b9adc978f</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MCP1702T-3302E/TO</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="MCP1700x-330xxTO" description="250mA Low Quiscent Current LDO, 3.3V output, TO-92"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2047d109-73be-4c56-9c6e-d5510ad0ede5</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>ESP8266-01s</value>
+      <footprint>ESP8266:ESP8266-01s</footprint>
+      <datasheet>https://www.universal-solder.ca/downloads/esp8266_series_modules_user_manual_en.pdf</datasheet>
+      <libsource lib="ESP8266" part="ESP8266-01s" description="ESP8266 ESP-01s module"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="runLimiter.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9f84472-b4da-467f-b8fd-e9086bd06a22</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="AZ7029ZTR-E1" part="2N3904">
+      <description>0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92</description>
+      <docs>https://www.onsemi.com/pub/Collateral/2N3903-D.PDF</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2N3904</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/2N3903-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_TH_Headers" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small_US">
+      <description>Resistor, small US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4003">
+      <description>200V 1A General Purpose Rectifier Diode, DO-41</description>
+      <docs>http://www.vishay.com/docs/88503/1n4001.pdf</docs>
+      <footprints>
+        <fp>D*DO?41*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4003</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet">http://www.vishay.com/docs/88503/1n4001.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ESP8266" part="ESP8266-01s">
+      <description>ESP8266 ESP-01s module</description>
+      <docs>https://www.universal-solder.ca/downloads/esp8266_series_modules_user_manual_en.pdf</docs>
+      <footprints>
+        <fp>ESP-01*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP8266-01s</field>
+        <field name="Footprint">ESP8266:ESP8266-01s</field>
+        <field name="Datasheet">https://www.universal-solder.ca/downloads/esp8266_series_modules_user_manual_en.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="U0TXD/GPIO1" type="bidirectional"/>
+        <pin num="3" name="U1TXD/GPIO2" type="bidirectional"/>
+        <pin num="4" name="CH_EN/CH_PD" type="input"/>
+        <pin num="5" name="GPIO0" type="bidirectional"/>
+        <pin num="6" name="RST" type="input"/>
+        <pin num="7" name="GPIO3/U0RXD" type="bidirectional"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="MCP1700x-330xxTO">
+      <description>250mA Low Quiscent Current LDO, 3.3V output, TO-92</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP1700x-330xxTO</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VI" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Relay" part="SANYOU_SRD_Form_C">
+      <description>Sanyo SRD relay, Single Pole Miniature Power Relay,</description>
+      <docs>http://www.sanyourelay.ca/public/products/pdf/SRD.pdf</docs>
+      <footprints>
+        <fp>Relay*SPDT*SANYOU*SRD*Series*Form*C*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">SANYOU_SRD_Form_C</field>
+        <field name="Footprint">Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C</field>
+        <field name="Datasheet">http://www.sanyourelay.ca/public/products/pdf/SRD.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="2SC1945">
+      <description>6A Ic, 80V Vce, Silicon 27MHz RF Power NPN Transistors, TO-220</description>
+      <docs>https://pdf1.alldatasheet.com/datasheet-pdf/view/271672/SAVANTIC/2SD2023.html</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q1(alt)</field>
+        <field name="Value">2SD2023</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">https://pdf1.alldatasheet.com/datasheet-pdf/view/271672/SAVANTIC/2SD2023.html</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="AZ7029ZTR-E1">
+      <uri>/home/david/projects/solar stuff/solarIOT/AZ7029ZTR-E1.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Connector_TH_Headers">
+      <uri>/home/david/Documents/PlatformIO/Projects/RunLimiter/extras/runLimiter/Connector_TH_Headers.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>/usr/share/kicad/symbols//Diode.kicad_sym</uri>
+    </library>
+    <library logical="ESP8266">
+      <uri>/home/david/.local/share/kicad/6.0/symbols/kicad-ESP8266/ESP8266.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/usr/share/kicad/symbols//Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Relay">
+      <uri>/usr/share/kicad/symbols//Relay.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/usr/share/kicad/symbols//Transistor_BJT.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/Control Ground">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K1" pin="2" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="C" pintype="passive"/>
+    </net>
+    <net code="2" name="/Control Power">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="K1" pin="5" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="3" name="/Internal Power">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="VO" pintype="power_out"/>
+      <node ref="U2" pin="8" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="4" name="GNDREF">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="E" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="E" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="5" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="GPIO0" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="Net-(J3-Pad1)">
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="K1" pin="3" pintype="passive"/>
+    </net>
+    <net code="8" name="Net-(J3-Pad2)">
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K1" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(J3-Pad3)">
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="K1" pin="4" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(Q1-Pad2)">
+      <node ref="Q1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="GPIO3/U0RXD" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="Net-(R3-Pad1)">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="U1TXD/GPIO2" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="unconnected-(U2-Pad2)">
+      <node ref="U2" pin="2" pinfunction="U0TXD/GPIO1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="14" name="unconnected-(U2-Pad4)">
+      <node ref="U2" pin="4" pinfunction="CH_EN/CH_PD" pintype="input+no_connect"/>
+    </net>
+    <net code="15" name="unconnected-(U2-Pad6)">
+      <node ref="U2" pin="6" pinfunction="RST" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>
