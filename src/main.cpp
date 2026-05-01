@@ -13,13 +13,13 @@
  * 
  * Configuration is done via serial connection (d1 mini only) or by retained MQTT message.
  *
- * ********** NOTE ***************** 
+ * ********** NO LONGER TRUE ***************** 
  * The runtime limiter used on the Buteomont water system uses
  * a slightly different circuit than the compressor uses. The trouble LED is 
  * connected to the same pin as the output transistor, so it does not blink 
  * when the circuit times out. The definition FLASH_LED in runLimiter.h MUST 
  * be set to false when loading code for that controller.
- * ********** NOTE ***************** 
+ * ********** NO LONGER TRUE ***************** 
  * 
  * When using the ESP8266-01S, The PRECONFIGURE keyword at the top of this file must 
  * be defined the first time it is programmed so that you can do the initial configuration
@@ -42,7 +42,7 @@
 
 #include "runLimiter.h"
 
-//#define PRECONFIGURE //uncomment this to allow initial configuration via serial on ESP-01s
+// #define PRECONFIGURE //uncomment this to allow initial configuration via serial on ESP-01s
 
 char *stack_start;// initial stack size
 
@@ -193,7 +193,7 @@ void incomingMqttHandler(char* reqTopic, byte* payload, unsigned int length)
     Serial.println("************ Failure when publishing status response!");
   }
 
-boolean sendMessage(char* topic, char* value)
+boolean sendMessage(const char* topic, char* value)
   { 
   boolean success=false;
   if (!mqttClient.connected())
@@ -523,7 +523,8 @@ void reconnect()
 //Generate an MQTT client ID.  This should not be necessary very often
 char* generateMqttClientId(char* mqttId)
   {
-  strcpy(mqttId,strcat(MQTT_CLIENT_ID_ROOT,String(random(0xffff), HEX).c_str()));
+  strcpy(mqttId,MQTT_CLIENT_ID_ROOT);
+  strcat(mqttId,String(random(0xffff), HEX).c_str());
   if (settings.debug)
     {
     Serial.print("New MQTT userid is ");
